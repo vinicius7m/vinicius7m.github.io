@@ -1,0 +1,252 @@
+/* CONFIGURAÇÕES INICIAIS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* CORES */
+.btn-dark {
+    background-color: black;
+
+}
+#cinza-escuro {
+    color: #ccc;
+}
+#cinza-escuro:hover {
+    color: white;
+    transition: color linear 0.2s;
+}
+
+#preto-grafite {
+    background-color: #0c0c0c;
+    color: white;
+}
+
+#preto {
+    background-color: #080808; 
+    color: #f3f3f3;
+}
+/* MENU */
+nav {
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: black;
+    outline: none;
+}
+#menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 12px 20px;
+    min-width: 100px;
+    text-align: center;
+}
+
+#menu ul li a{
+	position: relative;
+}
+#menu ul li a:hover{
+	color: black;
+	transition: 0.2s;
+}
+#menu ul li a:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: -1;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+#menu ul li a:hover:before{
+	color: white;
+	transform-origin: left;
+	transform: scaleX(1);
+	transition: transform 0.5s;
+}
+
+/* BANNER */
+
+.banner {
+    height: 91vh;
+    background-image: url(../../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+}
+.banner:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91vh;
+    background: linear-gradient(to bottom, black, #272727);
+    opacity: 0.8;
+    z-index: -1;
+}
+.banner-legenda {
+    color: white;
+    padding-top: 34vh;
+}
+.banner-icon  {
+    color: white;
+    /* border: 1px solid white; */
+    position: relative;
+    z-index: 1;
+}
+#legenda {
+    font-size: 5vw;
+}
+#legenda::after {
+    content:'|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+#sublegenda {
+    color: #e9e9e9;
+    font-size: 3vw;
+}
+#sublegenda::after {
+    opacity: 0;
+    animation: pisca .7s;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* SECTIONS DEPOIS DO BANNER */
+
+.titulo-section {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.sobre {
+    content:'';
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.borda-titulo {
+    border-bottom: 5px solid #4D5154;
+    width: 70px;
+}
+
+#borda-rounded:hover {    
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow linear 0.15s;
+}
+
+/* HABILIDADES */
+
+.skills li {
+    margin: 15px 0;
+    list-style: none;
+}
+.bar {
+    background: #d3d3d3;
+    display: block;
+    height: 7px;
+    /* border: 1px solid rgba(0,0,0,0.3); */
+    border-radius: 3px;
+    overflow: hidden;
+    /* box-shadow: 0 0 20px #7c7c7c; */
+}
+.bar span {
+    height: 7px;
+    float: left;
+    background: #1c1c1c;
+}
+.skillp {
+    float: right;
+    position: relative;
+    top: -25px;
+    right: 30px;
+}
+.java {
+    width: 85%;
+    animation: html 7s;
+}
+.js {
+    width: 65%;
+    animation: js 7s;
+}
+.php {
+    width: 80%;
+    animation: php 7s;
+}
+.html {
+    width: 90%;
+    animation: html 7s;
+}
+@keyframes java {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+@keyframes js {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+@keyframes php {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.projetos {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: #d9d9d9;
+    /* opacity: 0.9; */
+}
+
+#borda-footer {
+    border-bottom: 2px solid #ccc;
+    width: 50px;
+}
+
+.mgt {
+    margin-top: -10px;
+}
